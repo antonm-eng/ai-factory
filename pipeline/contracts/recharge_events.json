@@ -1,14 +1,48 @@
 {
   "name": "recharge_events",
   "owner": "data-engineering",
-  "source": "billing.recharge_events (CDC export)",
-  "contract_version": "3.2",
+  "source": "billing.recharge_events (CDC export, billing v4)",
+  "contract_version": "4.0",
   "columns": [
-    {"name": "event_id", "type": "TEXT", "nullable": false},
-    {"name": "msisdn_hash", "type": "TEXT", "nullable": false, "pii": "pseudonymised"},
-    {"name": "recharge_ts", "type": "TEXT", "nullable": false},
-    {"name": "amount_azn", "type": "REAL", "nullable": false},
-    {"name": "channel", "type": "TEXT", "nullable": false, "allowed": ["retail", "digital", "ussd", "bank"]},
-    {"name": "plan_type", "type": "TEXT", "nullable": false, "allowed": ["prepaid"]}
+    {
+      "name": "event_id",
+      "type": "TEXT",
+      "nullable": false
+    },
+    {
+      "name": "msisdn_hash",
+      "type": "TEXT",
+      "nullable": false,
+      "pii": "pseudonymised"
+    },
+    {
+      "name": "recharge_ts",
+      "type": "TEXT",
+      "nullable": false
+    },
+    {
+      "name": "amount_azn",
+      "type": "REAL",
+      "nullable": false
+    },
+    {
+      "name": "sales_channel",
+      "type": "TEXT",
+      "nullable": false,
+      "allowed": [
+        "retail",
+        "digital",
+        "ussd",
+        "bank"
+      ]
+    },
+    {
+      "name": "plan_type",
+      "type": "TEXT",
+      "nullable": false,
+      "allowed": [
+        "prepaid"
+      ]
+    }
   ]
 }

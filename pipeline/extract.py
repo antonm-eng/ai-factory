@@ -18,7 +18,7 @@ SOURCE_FIELD_MAP = {
     "subscriber_hash": "msisdn_hash",
     "event_time": "recharge_ts",
     "amount": "amount_azn",
-    "chnl_cd": "channel",
+    "sales_chnl_cd": "sales_channel",  # billing v4: chnl_cd renamed
     "plan": "plan_type",
 }
 
